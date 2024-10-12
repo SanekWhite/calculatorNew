@@ -93,11 +93,11 @@ class ViewController: UIViewController {
     }
     //процент
     @IBAction func tapPercent(sender: UIButton) {
-        viewModel.operation(.persent)
+        viewModel.persent()
     }
     
     @IBAction func tapNegate(sender: UIButton) {
-        viewModel.operation(.negate)
+        viewModel.negate()
     }
     
     @IBAction func tapExit(sender: UIButton) {
@@ -138,8 +138,6 @@ enum Operations {
     case multiply
     case divide
     case none
-    case persent
-    case negate
     case fun
 }
 
@@ -212,8 +210,6 @@ class ViewModel {
             operationSymbol = "x"
         case .divide:
             operationSymbol = "/"
-        case .persent:
-            operationSymbol = "%"
         case .fun:
             operationSymbol = "HelloWorld"
         default: break
@@ -246,11 +242,7 @@ class ViewModel {
             }
         case .none:
             return
-        case .persent:
-                result /= value * 100
-        case .negate:
-            result.negate()
-            //это функция работает если только нажать число(например 2) нажать на +- и снова нажать на двойку
+        
         case .fun:
                  return
             
@@ -275,9 +267,25 @@ class ViewModel {
         closure(currentValue)
     }
     
-   
+    func negate () {
+         guard let value = Double(currentValue) else {return}
+         let newValue = -value
+         currentValue = "\(newValue)"
+         closure(currentValue)
+    }
     
-
+    func persent () {
+        guard let value = Double(currentValue) else {return}
+        let newValue = value / 100
+            currentValue = "\(newValue)"
+            closure(currentValue)
+        
+        let newTotal = value / totalValue * 100
+        totalValue = newTotal
+        closure(currentValue)
+        
+    }
+    
 }
 
 
