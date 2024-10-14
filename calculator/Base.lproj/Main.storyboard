@@ -26,7 +26,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="fPW-tB-Q4a" secondAttribute="height" multiplier="1:1" id="O0d-VW-qgq"/>
+                                                    <constraint firstAttribute="width" secondItem="fPW-tB-Q4a" secondAttribute="height" id="7dZ-zE-LPY"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -88,10 +88,11 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="/">
+                                                        <fragment content="÷">
                                                             <attributes>
-                                                                <font key="NSFont" size="20" name="Helvetica"/>
-                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -110,7 +111,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="7gI-Gx-2Sb" secondAttribute="height" multiplier="1:1" id="9y6-Dm-iNd"/>
+                                                    <constraint firstAttribute="width" secondItem="7gI-Gx-2Sb" secondAttribute="height" id="JfG-UH-kfV"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -194,7 +195,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Bhg-Kf-fFS" secondAttribute="height" multiplier="1:1" id="xzR-fu-lSa"/>
+                                                    <constraint firstAttribute="width" secondItem="Bhg-Kf-fFS" secondAttribute="height" id="kTY-8X-CeZ"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -212,7 +213,7 @@
                                                     <action selector="tapFourWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hK-ml-QgC"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-IT-BtJ" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-IT-BtJ" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="110" y="0.0" width="100" height="100"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -250,7 +251,7 @@
                                                     <action selector="tapSixWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbr-dn-ig0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs6-mg-stC" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs6-mg-stC" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <state key="normal" title="Button"/>
@@ -278,7 +279,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="tr3-Ai-zsd" secondAttribute="height" multiplier="1:1" id="e3e-uv-7Ym"/>
+                                                    <constraint firstAttribute="width" secondItem="tr3-Ai-zsd" secondAttribute="height" id="xtR-S7-zXV"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="1">
@@ -362,32 +363,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BWj-fy-JxP">
                                         <rect key="frame" x="0.0" y="440" width="430" height="100"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utH-2Z-eqS" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAt-8a-gcH">
+                                                <rect key="frame" x="0.0" y="0.0" width="210" height="100"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="utH-2Z-eqS" secondAttribute="height" multiplier="1:1" id="d1R-ia-ArK"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="GAt-8a-gcH" secondAttribute="height" multiplier="2.1" id="h2A-0D-b09"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Hello">
-                                                            <attributes>
-                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                <font key="NSFont" size="20" name="Helvetica"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="tapFunWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ahg-4t-9PT"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAt-8a-gcH" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
-                                                <rect key="frame" x="110" y="0.0" width="100" height="100"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -405,9 +386,12 @@
                                                     <action selector="tapZero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wfe-Sl-6Ba"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ez3-O1-iOD" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ez3-O1-iOD" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="220" y="0.0" width="100" height="100"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="Ez3-O1-iOD" secondAttribute="height" id="Ehy-yp-y7c"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -427,6 +411,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBL-Ct-zIW" customClass="RadiusButtons" customModule="calculator" customModuleProvider="target">
                                                 <rect key="frame" x="330" y="0.0" width="100" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gBL-Ct-zIW" secondAttribute="height" id="aDy-tB-c7n"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -447,6 +434,7 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCM-qo-3QE">
                                 <rect key="frame" x="40" y="318" width="350" height="0.0"/>
@@ -467,6 +455,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="circlezero" destination="GAt-8a-gcH" id="Vij-a4-w0e"/>
                         <outlet property="label" destination="xCM-qo-3QE" id="9qQ-6A-5j5"/>
                     </connections>
                 </viewController>
@@ -479,17 +468,14 @@
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

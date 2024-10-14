@@ -14,14 +14,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "0"
+        
+        
+        circlezero.layer.cornerRadius = 50
         
     }
     
-
+    
+    @IBOutlet weak var circlezero: UIButton!
     
     @IBAction func tapZero(_ sender: UIButton){
         viewModel.tapNumber(.zero)
+        
     }
   
     @IBAction func tapOne(_ sender: UIButton) {
@@ -78,9 +82,7 @@ class ViewController: UIViewController {
         viewModel.operation(.divide)
     }
     
-    @IBAction func tapFun(sender: UIButton) {
-        viewModel.operation(.fun)
-    }
+   
     
     // равно
     
@@ -117,9 +119,12 @@ class RadiusButtons: UIButton {
         super.layoutSubviews()
         layer.cornerRadius = frame.width / 2
     }
+    
+   
+    
 }
 
-enum Buttons {
+enum Buttons: String {
     case zero
     case one
     case two
@@ -138,7 +143,7 @@ enum Operations {
     case multiply
     case divide
     case none
-    case fun
+    
 }
 
 
@@ -148,10 +153,10 @@ enum Operations {
 
 class ViewModel {
     
-    var currentValue: String = "0"  //текущее значние на экране
-    var totalValue: Double = 0  // предыдущая операция
-    var operation: Operations = .none
-    var operationSymbol: String = ""
+    private var currentValue: String = "0"  //текущее значние на экране
+    private var totalValue: Double = 0  // предыдущая операция
+    private var operation: Operations = .none
+    private var operationSymbol: String = ""
     
     
     var closure: (String) -> ()
@@ -159,7 +164,7 @@ class ViewModel {
         self.closure = closure
     }
     
-    func  tapNumber (_ button: Buttons) {
+     func  tapNumber (_ button: Buttons) {
         switch button {
         case.zero:
             currentValue += "0"
@@ -193,7 +198,7 @@ class ViewModel {
         
     }
     
-    func operation(_ op: Operations) {
+     func operation(_ op: Operations) {
         if let value = Double(currentValue) {
             totalValue = value
             
@@ -203,25 +208,24 @@ class ViewModel {
         
         switch op {
         case .add:
-            operationSymbol = "+"
+            operationSymbol = "\(Int(totalValue))"
         case .subtract:
-            operationSymbol = "-"
+            operationSymbol = "\(Int(totalValue))"
         case .multiply:
-            operationSymbol = "x"
+            operationSymbol = "\(Int(totalValue))"
         case .divide:
-            operationSymbol = "/"
-        case .fun:
-            operationSymbol = "HelloWorld"
+            operationSymbol = "\(Int(totalValue))"
+       
         default: break
             
         }
-        
+        closure(operationSymbol)
       
-        closure("\(operationSymbol)")
+        
         
     }
     
-    func calculate () {
+     func calculate () {
         guard let value = Double(currentValue) else {return}
         var result: Double = totalValue
         
@@ -236,15 +240,12 @@ class ViewModel {
             if value != 0 {
                 result /= value
             } else {
-                closure("Error")
-                clear()
+                closure("Ошибка")
                 return
             }
+        
         case .none:
             return
-        
-        case .fun:
-                 return
             
         }
         
@@ -259,7 +260,7 @@ class ViewModel {
     
    
     
-    func clear () {
+     func clear () {
         currentValue = "0"
         totalValue = 0
         operation = .none
@@ -267,14 +268,14 @@ class ViewModel {
         closure(currentValue)
     }
     
-    func negate () {
+     func negate () {
          guard let value = Double(currentValue) else {return}
          let newValue = -value
          currentValue = "\(newValue)"
          closure(currentValue)
     }
     
-    func persent () {
+     func persent () {
         guard let value = Double(currentValue) else {return}
         let newValue = value / 100
             currentValue = "\(newValue)"
